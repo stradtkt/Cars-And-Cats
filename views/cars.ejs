@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cars</title>
+    <link rel="stylesheet" href="/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="jumbotron">
+                    <h1 class="text-center">Cars</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <% for (const x in cars) { %>
+            <div class="col-md-4">
+                <div class="card shadow-lg mt-5">
+                    <img src="/img/<%= cars[x].image %>" alt="" width="200" height="200" style="margin: 0 auto;"> 
+                    <h3 class="card-title text-center">Name: <%= cars[x].name %></h3>
+                </div>
+            </div>
+            <% } %>
+        </div>
+    </div>
+    <script src="/dist/jquery.min.js"></script>
+    <script src="/dist/umd/popper.min.js"></script>
+    <script src="/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
